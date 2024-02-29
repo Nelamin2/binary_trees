@@ -20,7 +20,7 @@ if (new_node == NULL)
 return (NULL);
 return (*tree = new_node);
 }
-if (value < current_node->n) /* insert in left subtree */
+if (value < current_node->n)
 {
 if (current_node->left != NULL)
 return (bst_insert(&current_node->left, value));
