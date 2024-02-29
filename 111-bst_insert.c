@@ -10,7 +10,6 @@
 bst_t *bst_insert(bst_t **tree, int value)
 {
 bst_t *current_node, *new_node;
-
 if (tree != NULL)
 {
 current_node = *tree;
@@ -30,7 +29,7 @@ if (new_node == NULL)
 return (NULL);
 return (current_node->left = new);
 }
-if (value > curr->n)
+if (value > current_node->n)
 {
 if (current_node->right != NULL)
 return (bst_insert(&current_node->right, value));
