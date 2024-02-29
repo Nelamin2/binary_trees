@@ -24,7 +24,8 @@ void levels_call(lev_ord *head, void (*func)(int));
  */
 void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int))
 {
-	lev_ord *child_nodes = NULL;
+	lev_ord *child_nodes;
+	child_nodes = NULL;
 
 	func(tree->n);
 	child_nodes = find_children(child_nodes, tree);
@@ -40,7 +41,9 @@ void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int))
  */
 void levels_call(lev_ord *head, void (*func)(int))
 {
-	lev_ord  *child_nodes = NULL, *current = NULL;
+	lev_ord  *child_nodes, *current;
+	child_nodes = NULL;
+	current = NULL;
 
 	if (!head)
 		return;
@@ -76,7 +79,9 @@ lev_ord  *find_children(lev_ord *head, const binary_tree_t *parent)
  */
 lev_ord  *list(lev_ord  *head, const binary_tree_t *btnode)
 {
-	lev_ord  *new = NULL, *last = NULL;
+	lev_ord  *new, *last;
+	new = NULL;
+	last = NULL;
 
 	new = malloc(sizeof(*new));
 	if (new)
@@ -104,7 +109,8 @@ void free_list(lev_ord  *head)
 {
 	lev_ord  *pointer;
 	pointer	= NULL;
-	while (head != NULL) 
+
+	while (head != NULL)
 	{
 		pointer = head->next;
 		free(head);
