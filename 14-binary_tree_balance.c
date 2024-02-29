@@ -3,7 +3,7 @@
 /**
  * binary_tree_balance - Measures the balance factor of a binary tree.
  * @tree: A pointer to the root node of the tree to measure the balance factor.
- * 0 if tree doesn't exist, else return balance factor.
+ * Return: 0 if sn't exist, else return balance factor.
  */
 int binary_tree_balance(const binary_tree_t *tree)
 {
